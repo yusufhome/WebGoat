@@ -23,9 +23,6 @@ jobs:
         uses: github/codeql-action/init@v4
         with:
           languages: java
-      - name: Build project (Maven) - required for Java codeql analysis
-        run: |
-          mvn -B -DskipTests package
       - name: Run CodeQL analysis
         uses: github/codeql-action/analyze@v4
 
